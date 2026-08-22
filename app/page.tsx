@@ -60,7 +60,7 @@ export default function HomePage() {
               className="font-mono text-xs sm:text-[13px] tracking-[0.2em] text-white/50 mb-7 uppercase flex items-center gap-2"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Testimony Gbadegesin · Junior Software Engineer</span>
+              <span>Testimony Gbadegesin · Junior Backend Engineer</span>
             </motion.p>
 
             {/* High-Impact Dual-Tone Headline */}

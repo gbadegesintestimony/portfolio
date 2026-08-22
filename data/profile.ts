@@ -1,8 +1,8 @@
 export const profile = {
   name: "Testimony Gbadegesin",
-  title: "Junior Software Engineer",
+  title: "Junior Backend Engineer",
   tagline: "Building secure, scalable systems from the backend out.",
-  eyebrow: "Testimony Gbadegesin · Junior Software Engineer",
+  eyebrow: "Testimony Gbadegesin · Junior Backend Engineer",
   location: "Abeokuta, Nigeria",
   availability: "Available for Remote Contracts & Full-time Engineering Roles",
   email: "testimonygbadegesin.dev@gmail.com",

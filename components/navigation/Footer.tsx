@@ -162,7 +162,7 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
             <span className="font-mono text-xs font-bold text-emerald-400 border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 rounded-full uppercase tracking-wider">
-              Junior Software Engineer
+              Junior Backend Engineer
             </span>
           </div>
         </div>
