@@ -15,8 +15,8 @@ export const profile = {
     "I enjoy solving problems around backend architecture, APIs, databases, application security, and production reliability, with a focus on building software that is maintainable, secure, and practical.",
   ],
   links: {
-    github: "https://github.com/Tee-D-Dev",
-    linkedin: "https://linkedin.com",
+    github: "https://github.com/gbadegesintestimony?tab=repositories",
+    linkedin: "https://www.linkedin.com/in/gbadegesin-testimony-757251278/",
     email: "mailto:testimonygbadegesin.dev@gmail.com",
     calendly: "/call",
     cv: "/Testimony_Gbadegesin_CV.pdf",

@@ -188,9 +188,9 @@ export const projects: ProjectItem[] = [
     type: "Enterprise System",
     status: "COMPLETED",
     year: "2026",
-    role: "Full-Stack Software Engineer",
+    role: "Full-Stack Engineer",
     timeline: "2026",
-    githubUrl: "https://github.com/Tee-D-Dev/DevTrack",
+    githubUrl: "https://github.com/gbadegesintestimony/DevTrack",
     liveUrl: "https://dev--track.vercel.app/",
     image: "/projects/devtrack-live.png",
     summary:
