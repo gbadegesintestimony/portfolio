@@ -322,6 +322,7 @@ export const projects: ProjectItem[] = [
     role: "Backend & Systems Developer",
     timeline: "2026",
     image: "/projects/ai-diagnostic-bot.png",
+    liveUrl: "https://obd-chat-bot.vercel.app/",
     summary:
       "Engineered an AI-assisted automotive diagnostic engine that interprets complex OBD-II Diagnostic Trouble Codes (DTCs), analyzes mechanical symptoms, and generates structured, deterministic repair workflows.",
     technologies: [
