@@ -108,11 +108,11 @@ The portfolio features five core principles that define Testimony's engineering 
 * **Key Modules:** Executive master portal, branch health scoring, membership & attendance tracking, branch financial reporting, automated PDF generation, and cross-branch analytics.
 * **Engineering Highlights:** Dual-layer data isolation, RBAC, background queue processing, and centralized observability.
 
-#### 2. **DevTrack — Developer & Project Tracking Platform**
-* **Type:** Production-oriented Full-Stack Engineering Platform
-* **Stack:** React, Node.js, Express.js, TypeScript, PostgreSQL, Docker
-* **Key Modules:** Secure project management, role-based task delegation, audit trails, and server-side validation.
-* **Engineering Highlights:** Server-level defense-in-depth, CSRF protection, rate limiting, audit logging, and containerized Docker workflow.
+#### 2. **CloudPrep — Cloud & DevOps Certification Examination Platform**
+* **Type:** High-Throughput Exam Engine & Distributed AI Platform *(Completed & Deployed)*
+* **Stack:** Golang (Gin), GORM, Next.js 15, TypeScript, Supabase (PostgreSQL), Google Gemini, Groq, Docker
+* **Key Modules:** 1,000+ pre-seeded multi-style question bank, dual-AI Gemini/Groq failover router, dynamic per-session option shuffling (A–D), timed mock exam integrity, and anti-pause keep-alive heartbeat.
+* **Engineering Highlights:** Sub-100ms cold starts on Render, ~20MB RAM footprint, 100% zero-downtime offline fallback, and active mock exam payload answer redaction.
 
 ---
 
@@ -168,7 +168,7 @@ c:\Users\testy\My portfolio\
 │   ├── projects/
 │   │   ├── page.tsx            # Projects directory listing
 │   │   └── [slug]/
-│   │       └── page.tsx        # Dynamic technical case study page (CGROWTH, DevTrack, etc.)
+│   │       └── page.tsx        # Dynamic technical case study page (CGROWTH, CloudPrep, etc.)
 │   │
 │   ├── about/
 │   │   └── page.tsx            # Biography, education, Google Cybersecurity cert, mechanical roots, skills matrix
@@ -270,7 +270,7 @@ gantt
   * Terminal header (`DIRECTORY: /PROJECTS`, `TOTAL_DEPLOYMENTS: N`).
   * 2-column project cards with IDE top bar (`rootprojects/<slug>`), live status badge, CRT preview images, and tech stack pills.
 * [ ] **3.2. Technical Case Study Engine (`/projects/[slug]`):**
-  * Flagship case studies for **CGROWTH** and **DevTrack**.
+  * Flagship case studies for **CGROWTH** and **CloudPrep**.
   * Mac-style terminal preview window (red/yellow/green dots, `FIG 1.0 // DASHBOARD_VIEW`).
   * Structured sections: The Problem, The Solution, Architecture, Core Modules (2x2 grid), Security Model, Engineering Logs (`01`, `02`, `03`), and Outcome.
   * Sticky **Manifest Sidebar** with metadata, live links, and in-page anchor navigation.
@@ -304,7 +304,7 @@ gantt
 [ ] Floating capsule navbar & mobile drawer work seamlessly
 [ ] 4 Core Expertise cards are fully rendered
 [ ] Experience entries for CGROWTH, Vaelis Group, and Asoro Automotive are complete
-[ ] Featured projects (CGROWTH, DevTrack) and case studies are complete
+[ ] Featured projects (CGROWTH, CloudPrep) and case studies are complete
 [ ] Supporting projects (Company Management API, E-Commerce API) are cataloged
 [ ] Philosophy (How I Build) and Tech Stack matrix are populated
 [ ] About page with education, agricultural engineering story, Google Cybersecurity cert, and CV download works

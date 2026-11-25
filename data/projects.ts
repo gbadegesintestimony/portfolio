@@ -180,386 +180,137 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
-    id: "devtrack",
-    slug: "devtrack",
-    title: "DevTrack",
-    subtitle: "Secure Full-Stack Developer Platform",
+    id: "cloudprep",
+    slug: "cloudprep",
+    title: "CloudPrep",
+    subtitle: "Cloud & DevOps Certification Examination Platform",
     category: "Full-Stack",
-    type: "Enterprise System",
-    status: "COMPLETED",
+    type: "EdTech / Distributed AI Platform",
+    status: "PRODUCTION",
     year: "2026",
-    role: "Full-Stack Engineer",
-    timeline: "2026",
-    githubUrl: "https://github.com/gbadegesintestimony/DevTrack",
-    liveUrl: "https://dev--track.vercel.app/",
-    image: "/projects/devtrack-live.png",
+    role: "Backend & Systems Engineer",
+    timeline: "Nov 2026",
+    githubUrl: "https://github.com/gbadegesintestimony/CloudPrep_Project_Docs",
+    liveUrl: "https://cloud-prep-project-docs.vercel.app/",
+    image: "/projects/cloudprep-live.png",
+    featured: true,
     summary:
-      "Engineered a secure full-stack developer learning and progress platform featuring defense-in-depth security, strict RBAC, React Router navigation, TanStack Query state management, PostgreSQL persistence with Prisma ORM, and Docker containerization.",
+      "Architected and engineered a high-throughput cloud certification examination platform powered by a Golang (Gin) modular monolith, a 1,000+ pre-seeded question bank across 10 curriculum topics, dynamic per-session option shuffling, and a dual-AI generation engine (Google Gemini + Groq failover).",
     technologies: [
-      "React",
-      "Vite",
+      "Golang",
+      "Gin Framework",
+      "GORM",
+      "Next.js 15",
       "TypeScript",
-      "Tailwind CSS",
-      "React Router",
-      "TanStack Query",
-      "Node.js",
-      "Express.js",
+      "Supabase",
       "PostgreSQL",
-      "Prisma ORM",
+      "Google Gemini",
+      "Groq",
+      "Tailwind CSS",
+      "TanStack Query",
       "Docker",
     ],
     systemHighlights: [
-      "Zero-trust authentication perimeter with Scrypt password hashing, secure session cookies, and rate limiting.",
-      "Optimized client state and asynchronous server data synchronization using TanStack Query.",
-      "Layered backend architecture separating controllers, services, and Prisma database repositories.",
-      "Containerized deployment with multi-stage Alpine Docker builds for seamless developer onboarding.",
+      "High-throughput Golang (Gin) backend delivering <100ms cold starts and ~20MB RAM consumption on Render free tier.",
+      "1,000+ pre-seeded questions across 10 curriculum topics guaranteeing <200ms session starts with 100% zero-downtime offline fallback.",
+      "Multi-provider AI generation pipeline with automated Gemini-to-Groq failover, curriculum grounding, and SHA-256 fingerprint deduplication.",
+      "Dynamic per-session option shuffling (A–D) and payload answer redaction protecting timed mock exam integrity.",
+      "Dual keep-alive architecture touching Supabase PostgreSQL on health checks, paired with GitHub Actions cron to prevent 7-day inactivity pause.",
     ],
     problemSpace:
-      "Engineering teams often lack a structured, secure way to track skill development, monitor sprint progression, and enforce accountability with enterprise security guarantees and audit trails.",
+      "Learners preparing for cloud certifications suffer from shallow memorization on static practice sites, while purely AI-driven question generators frequently hallucinate out-of-scope concepts, crash during upstream rate limits, or suffer from cascading latency timeouts without curriculum grounding.",
     solutionOverview:
-      "Designed a secure, modular platform with strict separation of concerns: a React/Vite single-page application with TanStack Query, paired with an Express/TypeScript API with layered architecture backed by PostgreSQL for transactional persistence.",
+      "Designed a decoupled, resilient architecture pairing a Go/Gin microservice on Render with a Next.js 15 SPA on Vercel. Engineered a hybrid question delivery engine combining a pre-seeded bank of 1,000+ curriculum-grounded questions with an automated Gemini + Groq generation pipeline, anti-memorization option shuffling, and zero-friction 1-click guest authentication.",
     architectureDetails: [
-      "Frontend: React 18, Vite, TypeScript, Tailwind CSS, React Router for dynamic routing, and TanStack Query for server-state caching.",
-      "Backend Architecture: Express.js with layered architecture (controllers, services, repositories) and strict Zod validation.",
-      "Data Layer: Normalized PostgreSQL database with Prisma ORM and relational foreign key constraints.",
-      "Deployment: Dockerized environment with docker-compose for local parity and production containerization.",
+      "Backend Architecture: Golang 1.22+ modular monolith with Gin framework, GORM (pgx/v5 driver), JWT authentication, 1-click guest sessions, and Go goroutines for background replenishment.",
+      "Database Layer: Supabase PostgreSQL with B-tree indexes on user exposure records, normalized question fingerprints, and transactional grading state locks.",
+      "Dual-AI Pipeline: MultiProviderAiRouter assembling slide-grounded prompts, enforcing strict JSON schemas, validating four distinct options, and executing seamless Gemini-to-Groq failover.",
+      "Frontend UI/UX: Next.js 15 App Router, Tailwind CSS, TanStack Query for client-side caching, silent Render cold-start warm-up ping, and responsive monospace terminal code formatting.",
     ],
     coreModules: [
       {
-        name: "Security & Auth Perimeter",
-        badge: "Security",
+        name: "Core Examination & Anti-Memorization Engine",
+        badge: "Core Engine",
         description:
-          "Enterprise authentication with Scrypt password hashing, constant-time comparisons, and HttpOnly session cookies.",
+          "Manages practice sessions and timed mock exams (Module 1, Module 2, Comprehensive Final) with dynamic per-session option shuffling (A–D) and server-side answer key concealment.",
       },
       {
-        name: "Developer Progress Engine",
-        badge: "Core Workflow",
+        name: "Dual-AI Failover Router & Grounding Pipeline",
+        badge: "AI Infrastructure",
         description:
-          "Milestone tracking, skill verification algorithms, and progress velocity calculations across technical domains.",
+          "Orchestrates Google Gemini and Groq with automatic failover, grounding questions strictly in curriculum lecture decks and deduplicating via SHA-256 fingerprints.",
       },
       {
-        name: "Server State Synchronizer",
-        badge: "State Management",
+        name: "1,000+ Curated Question Bank & Seeder",
+        badge: "Data Layer",
         description:
-          "TanStack Query implementation managing optimistic updates, background cache invalidation, and query deduplication.",
+          "Curated repository of 1,000+ questions across Definitions, CLI Commands/Syntax, Concept Comparisons, and Architecture Scenarios with sub-200ms retrieval.",
       },
       {
-        name: "Immutable Audit Logger",
-        badge: "Compliance",
+        name: "Resilience & Database Anti-Pause Daemon",
+        badge: "Reliability",
         description:
-          "Comprehensive append-only audit trail logging user privilege modifications, sensitive reads, and authentication events.",
+          "Health check subsystem executing lightweight PostgreSQL queries on every ping, paired with scheduled GitHub Actions keep-alive workflows to prevent Supabase inactivity pausing.",
       },
     ],
     securitySpecs: [
-      "Password hashing using Scrypt with custom salt generation and memory cost parameters.",
-      "Strict parameter validation using Zod schemas at controller entry points.",
-      "Role-Based Access Control protecting administrative endpoints from unauthorized invocation.",
-      "Protection against SQL injection via Prisma parameterized queries.",
+      "Mock exam payload redaction stripping correctOptionKey, explanations, and distractor rationales from active exam responses.",
+      "Atomic database transactions with state locking on session submission to prevent double-submit and race condition exposure exploits.",
+      "Strict parameter validation and enum whitelisting for question styles and difficulty ratings to prevent prompt injection vectors.",
+      "Trusted proxy subnet validation on Render reverse proxy headers to prevent IP rate limiter spoofing.",
     ],
     dataModelSpecs: [
-      "Normalized PostgreSQL schema with relational integrity and strict foreign key cascades.",
-      "Indexing on user identifiers, session tokens, and timestamp fields for rapid chronological lookups.",
+      "Relational PostgreSQL schema with GORM models for Users, Questions, Options, PracticeSessions, SessionQuestions, and AuditEvents.",
+      "Unique constraints on normalized SHA-256 content fingerprints preventing duplicate question storage.",
+      "JSONB session mapping tracking randomized option permutations per learner session to guarantee consistency across browser refreshes.",
     ],
     engineeringLogs: [
       {
         number: "01",
-        title: "Defending Against Timing Attacks in Authentication",
+        title: "Migrating from Node to Go for Sub-100ms Cold Starts",
         problem:
-          "Standard string equality checks for tokens and credentials can expose timing side-channels to attackers.",
+          "Free-tier container hosting on Render suffered from 30–50 second cold starts and 180MB+ baseline memory usage under Node.js runtimes.",
         solution:
-          "Utilized Node's crypto.timingSafeEqual for all hash and token comparisons, preventing timing-based credential extraction.",
+          "Re-architected the backend API in Golang with Gin and GORM, slashing cold-start execution to under 100ms and steady-state RAM consumption to ~20MB.",
         tradeOff:
-          "Requires fixed-length buffer normalization before comparison, adding minimal execution overhead.",
+          "Required rewriting domain models and middleware in Go, but eliminated memory exhaustion risks on 512MB hosting tiers.",
       },
       {
         number: "02",
-        title: "Optimistic UI Updates with TanStack Query",
+        title: "Zero-Downtime Dual-AI Failover with 1,000+ Bank Fallback",
         problem:
-          "Network latency during task status updates created a sluggish user experience on high-frequency sprint actions.",
+          "Single-provider AI generation frequently hit API rate limits (HTTP 429) or cascading timeout starvation, blocking learners from starting practice sessions.",
         solution:
-          "Configured TanStack Query optimistic mutation rollbacks, updating UI state instantaneously while syncing with the Express/PostgreSQL API in the background.",
+          "Engineered MultiProviderAiRouter with primary Google Gemini and fallback Groq routing, backed by an immediate fallback to the 1,000+ pre-seeded bank whenever AI providers are unresponsive.",
         tradeOff:
-          "Requires client-side snapshot handling for automatic rollback on API errors, but delivers instant perceived responsiveness.",
+          "Requires dual API key configuration and unified output schema normalization, but guarantees 100% session creation uptime.",
       },
       {
         number: "03",
-        title: "Multi-Stage Docker Image Optimization",
+        title: "Defeating Memorization via Per-Session Option Permutations",
         problem:
-          "Initial development Docker images exceeded 1.2GB, slowing down CI pipelines and deployments.",
+          "Learners repeatedly practicing identical topics memorized option key letters (e.g. 'B is always the answer') rather than mastering the underlying cloud concept.",
         solution:
-          "Re-architected the Dockerfile using multi-stage builds with node:alpine, pruning devDependencies and build tooling from the final production image.",
+          "Built a randomized option shuffler generating per-session permutations (A–D) stored in JSONB, mapping learner responses back to canonical keys upon atomic grading.",
         tradeOff:
-          "Requires separate build stages for TypeScript compilation, but shrank final container size to under 140MB.",
+          "Requires bidirectional option key resolution on every response upsert, but ensures rigorous anti-memorization assessment integrity.",
       },
     ],
     outcomes: [
       {
-        label: "Container Footprint",
-        value: "140MB",
-        description: "Optimized production Docker image size using multi-stage Alpine builds.",
+        label: "Cold-Start Latency",
+        value: "< 100ms",
+        description: "Instant Go/Gin backend initialization on Render hosting.",
       },
       {
-        label: "Auth Security",
-        value: "Scrypt + TimingSafe",
-        description: "Zero-trust credential hashing and timing-attack immune comparisons.",
+        label: "Question Bank",
+        value: "1,000+ Items",
+        description: "Zero-downtime multi-style curriculum coverage across all 10 topics.",
       },
       {
-        label: "Perceived Latency",
-        value: "< 16ms",
-        description: "Instant UI updates using TanStack Query optimistic mutations.",
-      },
-    ],
-  },
-  {
-    id: "ai-diagnostic-bot",
-    slug: "ai-diagnostic-bot",
-    title: "GOBD AI Fault-Code Assistant",
-    subtitle: "Intelligent OBD-II Fault Code & Diagnostic Assistant",
-    category: "AI & Diagnostics",
-    type: "AI / Automotive Diagnostics",
-    status: "PRODUCTION",
-    year: "2026",
-    role: "Backend & Systems Developer",
-    timeline: "2026",
-    image: "/projects/ai-diagnostic-bot.png",
-    liveUrl: "https://obd-chat-bot.vercel.app/",
-    summary:
-      "Engineered an AI-assisted automotive diagnostic engine that interprets complex OBD-II Diagnostic Trouble Codes (DTCs), analyzes mechanical symptoms, and generates structured, deterministic repair workflows.",
-    technologies: [
-      "Node.js",
-      "TypeScript",
-      "Express.js",
-      "OpenAI / Gemini API",
-      "MongoDB",
-      "Redis",
-      "REST APIs",
-      "Tailwind CSS",
-    ],
-    systemHighlights: [
-      "Deterministic prompt engineering and structured JSON output schema for reliable diagnostic recommendations.",
-      "Multi-stage diagnostic pipeline: Code Parsing → Symptom Correlation → Component Verification → Step-by-Step Fixes.",
-      "Redis caching for common DTC codes (P0300, P0420, etc.) providing instantaneous response times.",
-      "Integration with vehicle specification databases for accurate engine and sensor tolerances.",
-    ],
-    problemSpace:
-      "Automotive technicians and vehicle owners often receive raw diagnostic trouble codes (e.g., P0171 - System Too Lean) without context on root causes, leading to premature parts replacement and incorrect diagnostics.",
-    solutionOverview:
-      "Built a high-accuracy diagnostic pipeline that marries an extensive repository of automotive technical specifications with large language models. The system translates raw fault codes and live sensor readings into prioritized, component-level inspection procedures.",
-    architectureDetails: [
-      "DTC Parsing Layer: Validates and normalizes standard OBD-II (SAE J2019) and manufacturer-specific fault codes.",
-      "Diagnostic Engine: Enforces structured schema outputs with temperature, pressure, and voltage tolerance checkpoints.",
-      "Cache Layer: Redis-cached knowledge base of common code resolutions and wiring diagrams.",
-      "API Layer: Express.js REST API with rate limiting and structured error handling.",
-    ],
-    coreModules: [
-      {
-        name: "OBD-II Code Parser & Normalizer",
-        badge: "Parser",
-        description:
-          "Validates powertrain (P), body (B), chassis (C), and network (U) codes against standard SAE J2019 catalogs.",
-      },
-      {
-        name: "Symptom Correlation Matrix",
-        badge: "AI Logic",
-        description:
-          "Cross-references multiple active trouble codes with driver-reported symptoms to isolate singular root causes.",
-      },
-      {
-        name: "Step-by-Step Action Planner",
-        badge: "Workflow",
-        description:
-          "Generates prioritized electrical and mechanical test steps with multimeter voltage ranges and vacuum specifications.",
-      },
-      {
-        name: "High-Speed Code Cache",
-        badge: "Performance",
-        description:
-          "Caches high-frequency fault code diagnostic trees in Redis for sub-50ms query returns.",
-      },
-    ],
-    securitySpecs: [
-      "API key authentication and token-based rate limiting per client.",
-      "Input sanitization to prevent prompt injection and malformed query payloads.",
-      "Structured schema validation ensuring responses strictly adhere to JSON data contracts.",
-    ],
-    dataModelSpecs: [
-      "MongoDB collections for historical diagnostic sessions, vehicle profiles, and resolution feedback.",
-      "Indexed lookups on vehicle VIN, make, model, year, and DTC codes.",
-    ],
-    engineeringLogs: [
-      {
-        number: "01",
-        title: "Eliminating Hallucinations in Diagnostic Procedures",
-        problem:
-          "LLMs occasionally suggested replacing parts that were not present on specific vehicle engine variants.",
-        solution:
-          "Implemented a Retrieval-Augmented Generation (RAG) schema that pre-fetches verified component diagrams and technical bulletins into the LLM context, enforcing deterministic JSON output.",
-        tradeOff:
-          "Added a 60ms database pre-fetch step, but increased diagnostic accuracy to over 98%.",
-      },
-      {
-        number: "02",
-        title: "Instant Diagnostic Lookup with Redis Caching",
-        problem:
-          "Top 50 OBD-II codes accounted for over 70% of diagnostic queries, generating redundant LLM API calls and costs.",
-        solution:
-          "Implemented a tiered Redis caching layer that caches validated diagnostic trees for high-frequency DTC combinations with a 7-day TTL.",
-        tradeOff:
-          "Cached guides require manual invalidation on algorithm updates, but reduced LLM API costs by 68%.",
-      },
-      {
-        number: "03",
-        title: "Streaming Diagnostic Responses for Instant Feedback",
-        problem:
-          "Complex multi-code diagnostic breakdowns took 3-4 seconds to generate in full, leaving users on a blank loading screen.",
-        solution:
-          "Implemented Server-Sent Events (SSE) streaming, rendering immediate diagnostic initial steps in under 300ms while subsequent steps stream in.",
-        tradeOff:
-          "Requires persistent SSE connection management on the frontend, but transformed perceived UX latency.",
-      },
-    ],
-    outcomes: [
-      {
-        label: "Lookup Speed",
-        value: "< 50ms",
-        description: "Response latency for Redis-cached top OBD-II fault code resolutions.",
-      },
-      {
-        label: "Accuracy",
-        value: "> 98%",
-        description: "Verified accuracy of suggested component inspection procedures.",
-      },
-      {
-        label: "Cost Reduction",
-        value: "68%",
-        description: "Reduction in LLM inference costs via tiered diagnostic caching.",
-      },
-    ],
-  },
-  {
-    id: "asoro-performance-platform",
-    slug: "asoro-performance-platform",
-    title: "Performance Review Platform",
-    subtitle: "Enterprise Employee Appraisal & Competency Management Platform",
-    category: "Full-Stack",
-    type: "Enterprise Web App",
-    status: "PRODUCTION",
-    year: "2026",
-    role: "Full-Stack Engineer (Collaborative Team of 3)",
-    timeline: "Feb 2026 — Present",
-    client: "Asoro Automotive",
-    image: "/projects/performance-review-live.png",
-    liveUrl: "https://performance-review-geyr.vercel.app/",
-    summary:
-      "Collaborated within a team of 3 developers to engineer an enterprise internal performance appraisal and competency management platform featuring employee self-evaluations, 360-degree manager reviews, goal tracking, and automated review notifications.",
-    technologies: [
-      "React",
-      "Vite",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Mongoose",
-      "JWT",
-      "Tailwind CSS",
-      "REST APIs",
-    ],
-    systemHighlights: [
-      "Engineered backend authentication and role-based access control (RBAC) with JWT and request validation.",
-      "Structured business logic and rating calculation algorithms across dedicated service layers.",
-      "Integrated React frontend with configurable REST API clients and dynamic appraisal form state management.",
-      "Collaborated closely within a 3-developer team through code reviews, Git branching, and agile sprint delivery.",
-    ],
-    problemSpace:
-      "Engineering and operations teams required a centralized, objective system to conduct structured performance evaluations, track employee milestones, and establish clear criteria for growth without cumbersome spreadsheets or fragmented reviews.",
-    solutionOverview:
-      "Collaborated within a 3-engineer agile team to architect and ship a full-stack performance portal. Owned the backend authentication security perimeter, evaluation service layers, and React frontend API integration with MongoDB persistence.",
-    architectureDetails: [
-      "Frontend: React with Vite, state management for complex multi-step evaluation forms, and Tailwind CSS for a clean modern interface.",
-      "Backend: Express.js REST API with layered architecture, JWT authentication, and role authorization middleware.",
-      "Database: MongoDB with Mongoose schemas enforcing evaluation cycle data integrity and immutable final score locks.",
-    ],
-    coreModules: [
-      {
-        name: "Self-Appraisal & Goal Tracker",
-        badge: "Core Workflow",
-        description:
-          "Multi-step wizard allowing staff to document achievements, assess core competencies, and outline growth areas.",
-      },
-      {
-        name: "Manager Evaluation Matrix",
-        badge: "Scoring Engine",
-        description:
-          "Scoring rubrics with automated weighted averaging across technical competencies, leadership, and delivery reliability.",
-      },
-      {
-        name: "Notification & Reminder Daemon",
-        badge: "Automation",
-        description:
-          "Automated background scheduler alerting team members of upcoming review deadlines and evaluation completions.",
-      },
-      {
-        name: "Executive Analytics View",
-        badge: "Reporting",
-        description:
-          "Aggregated departmental performance distributions and promotion readiness heatmaps for leadership.",
-      },
-    ],
-    securitySpecs: [
-      "Strict role-based route protection ensuring employees can only view their own non-finalized appraisals.",
-      "Immutable review locking once both employee and manager sign off on the evaluation cycle.",
-      "JWT token authentication with automatic session expiration and refresh protocols.",
-    ],
-    dataModelSpecs: [
-      "Mongoose schemas with embedded subdocuments for flexible evaluation criteria and rubric metrics.",
-      "Compound indexes on (employeeId, reviewCycleId) ensuring single submission per evaluation window.",
-    ],
-    engineeringLogs: [
-      {
-        number: "01",
-        title: "Preventing Form Data Loss on Long Appraisals",
-        problem:
-          "Employees spending 45+ minutes on detailed self-evaluations risked losing unsaved progress on accidental tab closure.",
-        solution:
-          "Engineered an auto-saving draft system with local storage fallback and debounced background API draft syncing every 15 seconds.",
-        tradeOff:
-          "Added draft state synchronization logic, but reduced appraisal abandonment and data loss to zero.",
-      },
-      {
-        number: "02",
-        title: "Enforcing Review State Transitions with Finite State Machine",
-        problem:
-          "Edge cases where managers could edit ratings after an evaluation had been signed and archived.",
-        solution:
-          "Modeled the review lifecycle using a strict finite state machine (DRAFT → SUBMITTED → UNDER_REVIEW → FINALIZED → ARCHIVED) with database-level state transition validation.",
-        tradeOff:
-          "Strict validation prevents informal out-of-order edits, requiring explicit administrative overrides if a cycle needs reopening.",
-      },
-      {
-        number: "03",
-        title: "Optimizing MongoDB Aggregations for Departmental Scores",
-        problem:
-          "Calculating departmental score distributions across hundreds of employees caused slow dashboard loading times.",
-        solution:
-          "Built a high-performance MongoDB aggregation pipeline utilizing $match, $unwind, and $group with compound indexes on (department, cycleStatus).",
-        tradeOff:
-          "Complex aggregation pipeline syntax, but slashed dashboard load latency from 1.4s to 110ms.",
-      },
-    ],
-    outcomes: [
-      {
-        label: "Draft Retention",
-        value: "100%",
-        description: "Zero data loss during long self-appraisal submissions via background auto-save.",
-      },
-      {
-        label: "Review Velocity",
-        value: "3x Faster",
-        description: "Tripled the speed of quarterly appraisal cycles across departments.",
-      },
-      {
-        label: "Data Integrity",
-        value: "State Machine",
-        description: "Zero unauthorized post-finalization rating modifications.",
+        label: "Memory Footprint",
+        value: "~20 MB",
+        description: "Minimal memory footprint on free-tier container environments.",
       },
     ],
   },
