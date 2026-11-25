@@ -183,9 +183,9 @@ export const projects: ProjectItem[] = [
     id: "cloudprep",
     slug: "cloudprep",
     title: "CloudPrep",
-    subtitle: "Cloud & DevOps Certification Examination Platform",
+    subtitle: "AltSchool Cloud Engineering Exam Preparation Platform",
     category: "Full-Stack",
-    type: "EdTech / Distributed AI Platform",
+    type: "Community EdTech / Distributed AI Platform",
     status: "PRODUCTION",
     year: "2026",
     role: "Backend & Systems Engineer",
@@ -195,7 +195,7 @@ export const projects: ProjectItem[] = [
     image: "/projects/cloudprep-live.png",
     featured: true,
     summary:
-      "Architected and engineered a high-throughput cloud certification examination platform powered by a Golang (Gin) modular monolith, a 1,000+ pre-seeded question bank across 10 curriculum topics, dynamic per-session option shuffling, and a dual-AI generation engine (Google Gemini + Groq failover).",
+      "Architected and engineered a high-throughput exam preparation platform built to help fellow AltSchool Africa Cloud Engineering students master their curriculum and prepare for exams, powered by a Golang (Gin) modular monolith, a 1,000+ question bank grounded strictly in course slide decks, dynamic per-session option shuffling, and a dual-AI generation engine (Google Gemini + Groq failover).",
     technologies: [
       "Golang",
       "Gin Framework",
@@ -212,15 +212,15 @@ export const projects: ProjectItem[] = [
     ],
     systemHighlights: [
       "High-throughput Golang (Gin) backend delivering <100ms cold starts and ~20MB RAM consumption on Render free tier.",
-      "1,000+ pre-seeded questions across 10 curriculum topics guaranteeing <200ms session starts with 100% zero-downtime offline fallback.",
-      "Multi-provider AI generation pipeline with automated Gemini-to-Groq failover, curriculum grounding, and SHA-256 fingerprint deduplication.",
+      "1,000+ pre-seeded questions across 10 AltSchool curriculum topics guaranteeing <200ms session starts with 100% zero-downtime offline fallback.",
+      "Multi-provider AI generation pipeline with automated Gemini-to-Groq failover, AltSchool curriculum grounding, and SHA-256 fingerprint deduplication.",
       "Dynamic per-session option shuffling (A–D) and payload answer redaction protecting timed mock exam integrity.",
       "Dual keep-alive architecture touching Supabase PostgreSQL on health checks, paired with GitHub Actions cron to prevent 7-day inactivity pause.",
     ],
     problemSpace:
-      "Learners preparing for cloud certifications suffer from shallow memorization on static practice sites, while purely AI-driven question generators frequently hallucinate out-of-scope concepts, crash during upstream rate limits, or suffer from cascading latency timeouts without curriculum grounding.",
+      "Students in the AltSchool Africa Cloud Engineering diploma program needed a structured, interactive way to practice and test their comprehension of semester course slides (Linux, Bash, Git, AWS Compute/IAM, Networking, Storage, Databases, Serverless, and AI/MLOps). Static PDFs and flashcards made self-testing tedious, while generic internet quizzes frequently tested services outside the school's syllabus.",
     solutionOverview:
-      "Designed a decoupled, resilient architecture pairing a Go/Gin microservice on Render with a Next.js 15 SPA on Vercel. Engineered a hybrid question delivery engine combining a pre-seeded bank of 1,000+ curriculum-grounded questions with an automated Gemini + Groq generation pipeline, anti-memorization option shuffling, and zero-friction 1-click guest authentication.",
+      "Built a dedicated, high-performance learning platform to empower classmates to prepare and excel in their exams. Extracted all 8 lecture slide decks into an approved 1,000+ multi-style question bank with exact course module citations, zero-friction 1-click guest access so peers could practice immediately, dynamic option shuffling to prevent positional memorization, and an automated Gemini + Groq pipeline strictly grounded in the course materials.",
     architectureDetails: [
       "Backend Architecture: Golang 1.22+ modular monolith with Gin framework, GORM (pgx/v5 driver), JWT authentication, 1-click guest sessions, and Go goroutines for background replenishment.",
       "Database Layer: Supabase PostgreSQL with B-tree indexes on user exposure records, normalized question fingerprints, and transactional grading state locks.",

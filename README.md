@@ -108,11 +108,11 @@ The portfolio features five core principles that define Testimony's engineering 
 * **Key Modules:** Executive master portal, branch health scoring, membership & attendance tracking, branch financial reporting, automated PDF generation, and cross-branch analytics.
 * **Engineering Highlights:** Dual-layer data isolation, RBAC, background queue processing, and centralized observability.
 
-#### 2. **CloudPrep — Cloud & DevOps Certification Examination Platform**
-* **Type:** High-Throughput Exam Engine & Distributed AI Platform *(Completed & Deployed)*
+#### 2. **CloudPrep — AltSchool Cloud Engineering Exam Preparation Platform**
+* **Type:** Community-Driven Exam Engine & Distributed AI Platform *(Completed & Deployed)*
 * **Stack:** Golang (Gin), GORM, Next.js 15, TypeScript, Supabase (PostgreSQL), Google Gemini, Groq, Docker
-* **Key Modules:** 1,000+ pre-seeded multi-style question bank, dual-AI Gemini/Groq failover router, dynamic per-session option shuffling (A–D), timed mock exam integrity, and anti-pause keep-alive heartbeat.
-* **Engineering Highlights:** Sub-100ms cold starts on Render, ~20MB RAM footprint, 100% zero-downtime offline fallback, and active mock exam payload answer redaction.
+* **Key Modules:** 1,000+ pre-seeded questions grounded in AltSchool Africa course slide decks, dual-AI Gemini/Groq failover router, dynamic per-session option shuffling (A–D), timed mock exam presets, and anti-pause keep-alive heartbeat.
+* **Engineering Highlights:** Sub-100ms cold starts on Render, ~20MB RAM footprint, 100% zero-downtime offline fallback, and 1-click guest access for seamless peer onboarding.
 
 ---
 
